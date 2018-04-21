@@ -12,7 +12,10 @@ spring:
     hibernate:
       ddl-auto: update #设置建表策略；create：每次启动都会创建表，会删除已存在的表；update：如果有数据就不会创建，否则创建
     show-sql: true #执行SQL时，会在控制台显示
-
+  #devtools:
+    #restart:
+      #enabled: true #启动热部署
+      #additional-paths: src/main/java #指定热部署目录，此处修改会自动启动项目
 mybatis:
   mapper-locations: classpath*:mybatis/*.xml #设置mybatis的mapper文件位置
   type-aliases-package: com.heyu.sysuser.entity #设置实体类所在包
