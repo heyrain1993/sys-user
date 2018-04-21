@@ -1,0 +1,22 @@
+server:
+  servlet:
+    context-path: /sysUser #设置项目根路径
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    #设置编码，不使用SSL链接数据库
+    url: jdbc:mysql://127.0.0.1:3306/dubbo?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false
+    username: root
+    password: 123456
+  jpa:
+    hibernate:
+      ddl-auto: update #设置建表策略；create：每次启动都会创建表，会删除已存在的表；update：如果有数据就不会创建，否则创建
+    show-sql: true #执行SQL时，会在控制台显示
+
+mybatis:
+  mapper-locations: classpath*:mybatis/*.xml #设置mybatis的mapper文件位置
+  type-aliases-package: com.heyu.sysuser.entity #设置实体类所在包
+
+logging:
+  level:
+    com.heyu.sysuser.dao: DEBUG #在控制台打印执行的SQL

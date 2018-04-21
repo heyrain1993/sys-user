@@ -1,0 +1,6 @@
+server:
+  servlet:
+    context-path: /sysUser
+sys-user:
+  name: zhangsan
+  age: 25

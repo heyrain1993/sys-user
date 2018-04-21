@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.heyu.sysuser.dao.SysUserDao" >
+
+    <sql id="base_cloumns">
+		u.id AS id,
+		u.login_name AS loginName,
+		u.password AS password,
+		u.name AS name,
+		u.email AS email,
+		u.mobile AS mobile,
+		u.enabled AS enabled,
+		u.remarks AS remark,
+		u.create_date AS createDate,
+		u.update_date AS updateDate,
+		u.del_flag AS del_flag
+	</sql>
+
+    <select id="selectByLoginName" resultType="com.heyu.sysuser.entity.SysUser" parameterType = "java.lang.String">
+        select
+        <include refid="base_cloumns" />
+        from sys_user u
+        where u.login_name = #{loginName,jdbcType=VARCHAR}
+    </select>
+</mapper>
