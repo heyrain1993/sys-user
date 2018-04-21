@@ -19,6 +19,7 @@ spring:
 mybatis:
   mapper-locations: classpath*:mybatis/*.xml #设置mybatis的mapper文件位置
   type-aliases-package: com.heyu.sysuser.entity #设置实体类所在包
+  #config-location: 设置mybatis 配置文件位置
 
 logging:
   level:

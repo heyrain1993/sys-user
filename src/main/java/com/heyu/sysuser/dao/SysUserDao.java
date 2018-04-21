@@ -10,8 +10,6 @@ import java.util.List;
 /**
  *继承JpaRepository<SysUser,String>，添加默认的增删改查功能,String标识主键类型
  */
-@Component
-@Mapper
 public interface SysUserDao{
 
     public List<SysUser> selectByLoginName(@Param(value = "loginName") String loginName);
