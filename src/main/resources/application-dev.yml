@@ -16,6 +16,10 @@ spring:
     #restart:
       #enabled: true #启动热部署
       #additional-paths: src/main/java #指定热部署目录，此处修改会自动启动项目
+  redis:
+    host: 127.0.0.1
+    port: 6379
+
 mybatis:
   mapper-locations: classpath*:mybatis/*.xml #设置mybatis的mapper文件位置
   type-aliases-package: com.heyu.sysuser.entity #设置实体类所在包

@@ -1,11 +1,9 @@
 package com.heyu.sysuser.Controller;
 
-import com.heyu.sysuser.dao.SysUserDao;
 import com.heyu.sysuser.entity.SysUser;
 import com.heyu.sysuser.service.SysUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -22,7 +20,8 @@ public class SysUserController {
     @GetMapping(value = "users/{loginName}")
     @ResponseBody
     public List<SysUser> getUsers(@PathVariable(value = "loginName") String loginName){
-        return sysUserService.selectByLoginName(loginName);
+        //return sysUserService.selectByLoginName(loginName);
+        return null;
     }
 
    /* @PostMapping(value = "users")

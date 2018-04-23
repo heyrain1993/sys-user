@@ -1,19 +1,8 @@
 package com.heyu.sysuser.entity;
 
-import org.hibernate.annotations.GenericGenerator;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import java.util.Date;
 
-@Entity
 public class SysUser {
-
-    @Id
-    @GeneratedValue(generator = "system_uuid")
-    @GenericGenerator(name = "system_uuid",strategy = "uuid2")
     private String id;
 
     private String loginName;
@@ -28,7 +17,7 @@ public class SysUser {
 
     private String enabled;
 
-    private String remark;
+    private String remarks;
 
     private Date createDate;
 
@@ -36,8 +25,14 @@ public class SysUser {
 
     private String delFlag;
 
-    public SysUser(){
+    private String remark;
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id == null ? null : id.trim();
     }
 
     public String getLoginName() {
@@ -45,7 +40,7 @@ public class SysUser {
     }
 
     public void setLoginName(String loginName) {
-        this.loginName = loginName;
+        this.loginName = loginName == null ? null : loginName.trim();
     }
 
     public String getPassword() {
@@ -53,7 +48,7 @@ public class SysUser {
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        this.password = password == null ? null : password.trim();
     }
 
     public String getName() {
@@ -61,7 +56,7 @@ public class SysUser {
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.name = name == null ? null : name.trim();
     }
 
     public String getEmail() {
@@ -69,7 +64,7 @@ public class SysUser {
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        this.email = email == null ? null : email.trim();
     }
 
     public String getMobile() {
@@ -77,7 +72,7 @@ public class SysUser {
     }
 
     public void setMobile(String mobile) {
-        this.mobile = mobile;
+        this.mobile = mobile == null ? null : mobile.trim();
     }
 
     public String getEnabled() {
@@ -85,15 +80,15 @@ public class SysUser {
     }
 
     public void setEnabled(String enabled) {
-        this.enabled = enabled;
+        this.enabled = enabled == null ? null : enabled.trim();
     }
 
-    public String getRemark() {
-        return remark;
+    public String getRemarks() {
+        return remarks;
     }
 
-    public void setRemark(String remark) {
-        this.remark = remark;
+    public void setRemarks(String remarks) {
+        this.remarks = remarks == null ? null : remarks.trim();
     }
 
     public Date getCreateDate() {
@@ -117,6 +112,14 @@ public class SysUser {
     }
 
     public void setDelFlag(String delFlag) {
-        this.delFlag = delFlag;
+        this.delFlag = delFlag == null ? null : delFlag.trim();
+    }
+
+    public String getRemark() {
+        return remark;
+    }
+
+    public void setRemark(String remark) {
+        this.remark = remark == null ? null : remark.trim();
     }
 }
