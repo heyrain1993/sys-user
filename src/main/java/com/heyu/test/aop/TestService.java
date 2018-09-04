@@ -1,7 +1,6 @@
-package com.heyu.test.proxy;
+package com.heyu.test.aop;
 
 import com.heyu.test.Application;
-import com.heyu.test.shiro.dao.SysRoleDao;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,17 +9,23 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = Application.class)
-public class SubjectTest {
+public class TestService {
 
     @Autowired
-    private SysRoleDao sysRoleDao;
+    private LogService logService;
 
-    /*@Autowired
-    private Client client;*/
+    @Test
+    public void testInsert(){
+        logService.insert();
+    }
 
-    /*@Test
-    public void test(){
-        client.test();
-    }*/
+    @Test
+    public void testUpdate(){
+        logService.update();
+    }
 
+    @Test
+    public void testQuery(){
+        logService.query();
+    }
 }

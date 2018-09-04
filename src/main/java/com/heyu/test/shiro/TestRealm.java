@@ -24,7 +24,7 @@ import java.util.Map;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = Application.class)
-public class LoginController {
+public class TestRealm {
 
     @Autowired
     private DefinedRealm definedRealm;

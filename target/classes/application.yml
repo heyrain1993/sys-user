@@ -18,6 +18,11 @@ spring:
   jackson:
     default-property-inclusion: non_null #配置实体类中为null的字段在json中不返回
 
+
 mybatis:  #加载mybatis配置文件
   mapper-locations: classpath*:mybatis/*.xml
   type-aliases-package: com.heyu.test..model
+logging:
+  level:
+    com.heyu.test.shiro.dao: debug
+
